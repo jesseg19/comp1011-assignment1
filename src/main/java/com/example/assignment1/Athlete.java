@@ -1,18 +1,30 @@
 package com.example.assignment1;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class Athlete {
 
-    private String name, season;
-    private int id, age, height;
+    private int athleteId;
+    private String name, age, height, games, sport, medal;
 
-    public Athlete(String name, int age, int height, String season) {
+    public Athlete(String name, String age, String height, String games, String sport, String medal) {
         setName(name);
         setAge(age);
         setHeight(height);
-        setSeason(season);
+        setGames(games);
+        setSport(sport);
+        setMedal(medal);
+        athleteId = 0;
+    }
+
+    public int getAthleteId() {
+        return athleteId;
+    }
+
+    public void setAthleteId(int athleteId) {
+        if (athleteId > 0) {
+            this.athleteId = athleteId;
+        } else {
+            throw new IllegalArgumentException("athleteId must be greater than 0");
+        }
     }
 
     public String getName() {
@@ -23,53 +35,43 @@ public class Athlete {
         this.name = name;
     }
 
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
-        if(age > 0) {
-            this.age = age;
-        } else {
-            throw new IllegalArgumentException("Age must be greater than 0");
-        }
+    public void setAge(String age) {
+        this.age = age;
     }
 
-    public int getHeight() {
+    public String getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
-        if (height > 50) {
-            this.height = height;
-        } else {
-            throw new IllegalArgumentException("Invalid height");
-        }
+    public void setHeight(String height) {
+        this.height = height;
     }
 
-    public String getSeason() {
-        return season;
+    public String getGames() {
+        return games;
     }
 
-    public void setSeason(String season) {
-        List<String> validSeasons = Arrays.asList("summer", "winter");
-        if (validSeasons.contains(season.toLowerCase())) {
-            this.season = season;
-        } else {
-            throw new IllegalArgumentException("Invalid season, can only be summer or winter");
-        }
+    public void setGames(String games) {
+        this.games = games;
     }
 
-    public int getId() {
-        return id;
+    public String getSport() {
+        return sport;
     }
 
-    public void setId(int id) {
-        if (id > 0) {
-            this.id = id;
-        } else {
-            throw new IllegalArgumentException("ID must be greater than 0");
-        }
+    public void setSport(String sport) {
+        this.sport = sport;
+    }
 
+    public String getMedal() {
+        return medal;
+    }
+
+    public void setMedal(String medal) {
+        this.medal = medal;
     }
 }
