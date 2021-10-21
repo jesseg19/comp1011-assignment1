@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.chart.BarChart?>
-<?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.NumberAxis?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment1.AthleteHeightViewController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment1.AthleteHeightViewController">
    <children>
       <BorderPane layoutX="-2.0" prefHeight="400.0" prefWidth="600.0">
          <center>
@@ -23,7 +19,7 @@
             </BarChart>
          </center>
          <top>
-            <Label text="Olympic Athlete Height" BorderPane.alignment="CENTER" />
+            <Label id="header" text="Olympic Athlete Height" BorderPane.alignment="CENTER" />
          </top>
          <bottom>
             <Button mnemonicParsing="false" onAction="#changeScreenButtonPushed" text="Table View" BorderPane.alignment="BOTTOM_LEFT">
